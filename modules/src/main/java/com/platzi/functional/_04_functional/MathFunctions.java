@@ -21,6 +21,10 @@ public class MathFunctions {
         // genera validaciones
         Predicate<Integer> isEvent = x -> x % 2 == 0;
         isEvent.test(4); // true
+
+        Predicate<Student> isApproved = student -> student.getCalificaion() >= 6.0;
+        Student oscar = new Student(7.0);
+        System.out.println(isApproved.test(oscar));
     }
 
     static  int squareFunction(int x){
